@@ -263,7 +263,30 @@ class ZU3EG_Platform(Platform):
     @property
     def compute_resources(self):
         return [[71000, 2 * 71000, 412, 0, 360] for i in range(1)]
-
+    
+    
+class ZU5EV_Platform(Platform):
+    def __init__(
+        self,
+        ndevices=1,
+        limits=DEFAULT_RES_LIMITS,
+        avg_constraints=DEFAULT_AVG_CONSTRAINTS,
+    ):
+        super(ZU7EV_Platform, self).__init__(
+            nslr=1,
+            ndevices=ndevices,
+            sll_count=[[0]],
+            ddr_slr=[],
+            eth_slr=0,
+            eth_gbps=1,
+            limits=limits,
+            avg_constraints=avg_constraints,
+        )
+        
+    @property
+    def compute_resources(self):
+        return [[117000, 2 * 117000, 280, 60, 1428] for i in range(1)]
+    
 
 class ZU7EV_Platform(Platform):
     def __init__(
